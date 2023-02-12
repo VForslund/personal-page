@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  goTo(url: string) {
+    window.open(url, '_blank')?.focus();
+  }
 }

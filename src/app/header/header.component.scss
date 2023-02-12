@@ -1,3 +1,40 @@
 .spacer {
   flex-grow: 1;
 }
+
+.middle-container{
+  display: flex;
+}
+
+.left-container{
+  display: flex;
+}
+
+.mat-toolbar-row{
+  min-height: 80px !important;
+  height: 80px !important;
+}
+.mat-toolbar {
+  min-height: 80px !important;
+  height: 80px !important;
+}
+
+.name{
+  align-self: center;
+  padding-left: 15px;
+}
+
+.profile{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.left-container{
+  padding-left: 20px;
+}
+.image{
+  width: 35px;
+  height: 35px;
+  padding: 0 20px;
+  filter: invert(1);
+}

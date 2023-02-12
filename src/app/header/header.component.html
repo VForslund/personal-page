@@ -1,8 +1,16 @@
 <mat-toolbar>
   <div class="left-container">
-    My Application</div>
+  <img class="profile" src="../../assets/icons/me.jpg">
+    <div class="name">
+      Victor Forslund
+    </div>
+  </div>
   <div class="spacer"></div>
-  <div>Icons</div>
+  <div class="middle-container">
+    <img (click)="goTo('https://github.com/VForslund/')" class="image" src="../../assets/icons/github.svg">
+    <img (click)="goTo('https://www.instagram.com/forslundvictor/')" class="image" src="../../assets/icons/instagram.svg">
+    <img (click)="goTo('https://www.linkedin.com/in/victor-forslund/')" class="image" src="../../assets/icons/linkedin.svg">
+  </div>
   <div class="spacer"></div>
   <div class="right-container">Navigation</div>
 </mat-toolbar>
