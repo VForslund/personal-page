@@ -1,40 +1,95 @@
+.toolbar {
+  background: var(--main-color);
+  position: relative;
+  border-image: linear-gradient(to right, var(--main-color), var(--primary-text-color), var(--main-color));
+  border-image-slice: 0 0 1 0;
+  border-image-width: 0 0 1px 0;
+  border-style: solid;
+}
+
 .spacer {
   flex-grow: 1;
 }
 
-.middle-container{
+.left-container {
   display: flex;
+  flex: 0 0 33.333333%;
+  justify-content: flex-start;
 }
 
-.left-container{
-  display: flex;
+.left-container-mobile {
+  flex: 0 0 50% !important;
 }
 
-.mat-toolbar-row{
+.middle-container {
+  display: flex;
+  flex: 0 0 33.333333%;
+  justify-content: center;
+}
+
+.right-container {
+  display: flex;
+  flex: 0 0 33.333333%;
+  justify-content: flex-end;
+}
+
+.right-container-mobile {
+  flex: unset;
+  flex-grow: 1;
+}
+
+.mat-toolbar-row {
   min-height: 80px !important;
   height: 80px !important;
 }
+
 .mat-toolbar {
   min-height: 80px !important;
   height: 80px !important;
 }
 
-.name{
+.name {
   align-self: center;
   padding-left: 15px;
 }
 
-.profile{
+.profile {
   width: 50px;
   height: 50px;
   border-radius: 50px;
 }
-.left-container{
-  padding-left: 20px;
-}
-.image{
+
+.image {
   width: 35px;
   height: 35px;
   padding: 0 20px;
-  filter: invert(1);
+  background-color: var(--primary-text-color);
+}
+
+.menu-image {
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary-text-color);
+}
+
+.text-color{
+  color: var(--primary-text-color);
+}
+
+.github {
+  mask: url("../../assets/icons/github.svg") no-repeat center;
+}
+.instagram {
+  mask: url("../../assets/icons/instagram.svg") no-repeat center;
+}
+.linkedin {
+  mask: url("../../assets/icons/linkedin.svg") no-repeat center;
+}
+
+
+.more-menu {
+  height: 35px;
+  width: 35px;
+  font-size: 35px;
+  cursor: pointer;
 }

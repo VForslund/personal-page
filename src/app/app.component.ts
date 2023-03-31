@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import {DeviceDetectorService, DeviceInfo} from "ngx-device-detector";
+import {DeviceDetectorService} from "ngx-device-detector";
+import {CommonService} from "./common.service";
+import {MatIconRegistry} from "@angular/material/icon";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
@@ -9,9 +12,25 @@ import {DeviceDetectorService, DeviceInfo} from "ngx-device-detector";
 })
 export class AppComponent {
 
-  isMobile: Boolean = false;
-  constructor(private deviceService: DeviceDetectorService) {
-    this.isMobile = this.deviceService.isMobile() || this.deviceService.isTablet();
+
+  constructor(private deviceService: DeviceDetectorService,
+              private commonService: CommonService,
+              private matIconRegistry: MatIconRegistry,
+              private domSanitizer: DomSanitizer
+  ) {
+    this.commonService.setIsMobile(this.deviceService.isMobile() || this.deviceService.isTablet());
+    this.matIconRegistry.addSvgIcon(
+      `github`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`../assets/icons/github.svg`)
+    );
+    this.matIconRegistry.addSvgIcon(
+      `instagram`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`../assets/icons/instagram.svg`)
+    );
+    this.matIconRegistry.addSvgIcon(
+      `linkedin`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`../assets/icons/linkedin.svg`)
+    );
   }
 
 }

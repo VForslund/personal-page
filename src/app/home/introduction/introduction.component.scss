@@ -1,15 +1,40 @@
-.section{
-  height: 100%;
-    --s: 200px; /* control the size */
-    --c1: rgb(33,33,33);
-    --c2: rgb(44,44,44);
-    --c3: rgb(55,55,55);
+.introduction-container {
+  width: 100%;
+  padding-top: 5%;
+}
 
-    background:
-      repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg)
-      calc(.5*var(--s)) calc(.5*var(--s)*0.577),
-      repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
-    background-size: var(--s) calc(var(--s)*0.577);
-    /* 0.577 = tan(30deg)*/
+.greeting {
+  font-size: 20px;
+  color: var(--secondary-text-color);
+}
 
+.greeting-phone {
+  font-size: 13px !important;
+  color: var(--secondary-text-color);
+}
+
+.name {
+  font-size: 86px;
+  line-height: 86px;
+  color: var(--primary-text-color);
+}
+
+.name-phone {
+  font-size: 32px !important;
+  line-height: 32px !important;
+}
+
+.title {
+  font-size: 74px !important;
+  line-height: 74px !important;
+  color: var(--tetra--text-color);
+}
+
+.title-phone {
+  font-size: 26px !important;
+  line-height: 26px !important;
+}
+
+.text-container {
+  margin-left: 20%;
 }

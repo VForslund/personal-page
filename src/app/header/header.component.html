@@ -1,16 +1,48 @@
-<mat-toolbar>
-  <div class="left-container">
-  <img class="profile" src="../../assets/icons/me.jpg">
-    <div class="name">
+<mat-toolbar class="toolbar">
+  <div class="left-container" [ngClass]="{'left-container-mobile': isMobile}">
+    <img class="profile" src="../../assets/icons/me.jpg">
+    <div class="name text-color">
       Victor Forslund
     </div>
   </div>
-  <div class="spacer"></div>
-  <div class="middle-container">
-    <img (click)="goTo('https://github.com/VForslund/')" class="image" src="../../assets/icons/github.svg">
-    <img (click)="goTo('https://www.instagram.com/forslundvictor/')" class="image" src="../../assets/icons/instagram.svg">
-    <img (click)="goTo('https://www.linkedin.com/in/victor-forslund/')" class="image" src="../../assets/icons/linkedin.svg">
+  <div *ngIf="!isMobile" class="middle-container">
+    <div (click)="goTo('https://github.com/VForslund/')" class="image github"></div>
+    <div (click)="goTo('https://www.instagram.com/forslundvictor/')" class="image instagram"></div>
+    <div (click)="goTo('https://www.linkedin.com/in/victor-forslund/')" class="image linkedin"></div>
   </div>
-  <div class="spacer"></div>
-  <div class="right-container">Navigation</div>
+
+  <div class="right-container" [ngClass]="{'right-container-mobile': isMobile}">
+    <mat-icon class="more-menu text-color" [matMenuTriggerFor]="menu">menu</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon class="text-color">dialpad</mat-icon>
+        <span class="text-color">About</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon class="text-color">voicemail</mat-icon>
+        <span class="text-color">Resume</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon class="text-color">notifications_off</mat-icon>
+        <span class="text-color">CV</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon class="text-color">notifications_off</mat-icon>
+        <span class="text-color">Contact</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon svgIcon="github" class="text-color"></mat-icon>
+        <span class="text-color">Github</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon svgIcon="instagram" class="text-color"></mat-icon>
+        <span class="text-color">Instagram</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon svgIcon="linkedin" class="text-color"></mat-icon>
+        <span class="text-color">Linkedin</span>
+      </button>
+    </mat-menu>
+
+  </div>
 </mat-toolbar>

@@ -8,6 +8,7 @@ import {MaterialModule} from "./material.module";
 import {HomeComponent} from "./home/home.component";
 import {HeaderComponent} from "./header/header.component";
 import {IntroductionComponent} from "./home/introduction/introduction.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {IntroductionComponent} from "./home/introduction/introduction.component"
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
