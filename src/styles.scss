@@ -1,12 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 html, body {
   height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
   background: var(--main-color);
 }
 
@@ -15,5 +15,4 @@ body {
   --primary-text-color: #e9d8a6;
   --secondary-text-color: #0a9396;
   --tetra--text-color: #94d2bd;
-  --ben: #f1faee;
 }

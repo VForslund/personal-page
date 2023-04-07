@@ -9,20 +9,30 @@ import {HomeComponent} from "./home/home.component";
 import {HeaderComponent} from "./header/header.component";
 import {IntroductionComponent} from "./home/introduction/introduction.component";
 import {HttpClientModule} from "@angular/common/http";
+import {AboutComponent} from "./about/about.component";
+import {HistoryComponent} from "./about/history/history.component";
+import {SkillSphereComponent} from "./home/skill-sphere/skill-sphere.component";
+import {ContactDialogComponent} from "./contact-dialog/contact-dialog.component";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutComponent,
     HeaderComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    SkillSphereComponent,
+    HistoryComponent,
+    ContactDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

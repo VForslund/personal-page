@@ -14,31 +14,36 @@
   <div class="right-container" [ngClass]="{'right-container-mobile': isMobile}">
     <mat-icon class="more-menu text-color" [matMenuTriggerFor]="menu">menu</mat-icon>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon class="text-color">dialpad</mat-icon>
+      <button mat-menu-item (click)="navigateToRoute('/home')">
+        <mat-icon class="text-color">home</mat-icon>
+        <span class="text-color">Home</span>
+      </button>
+      <button mat-menu-item (click)="navigateToRoute('/about')">
+        <mat-icon class="text-color">emoji_peoples</mat-icon>
         <span class="text-color">About</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon class="text-color">voicemail</mat-icon>
+      <button mat-menu-item (click)="openInNewTab('assets/pdfs/resume.pdf')">
+        <mat-icon class="text-color">history_edu</mat-icon>
         <span class="text-color">Resume</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon class="text-color">notifications_off</mat-icon>
+      <button mat-menu-item (click)="openInNewTab('assets/pdfs/cv.pdf')">
+        <mat-icon class="text-color">receipt_long</mat-icon>
         <span class="text-color">CV</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon class="text-color">notifications_off</mat-icon>
+      <button mat-menu-item (click)="openContactDialog()">
+        <mat-icon class="text-color">alternate_email</mat-icon>
         <span class="text-color">Contact</span>
       </button>
-      <button mat-menu-item>
+
+      <button mat-menu-item *ngIf="isMobile" (click)="goTo('https://github.com/VForslund/')">
         <mat-icon svgIcon="github" class="text-color"></mat-icon>
         <span class="text-color">Github</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item *ngIf="isMobile" (click)="goTo('https://www.instagram.com/forslundvictor/')">
         <mat-icon svgIcon="instagram" class="text-color"></mat-icon>
         <span class="text-color">Instagram</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item *ngIf="isMobile" (click)="goTo('https://www.linkedin.com/in/victor-forslund/')">
         <mat-icon svgIcon="linkedin" class="text-color"></mat-icon>
         <span class="text-color">Linkedin</span>
       </button>

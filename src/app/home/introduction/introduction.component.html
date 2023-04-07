@@ -1,7 +1,7 @@
 <div class="introduction-container">
-  <div class="text-container">
+  <div class="text-container" [ngClass]="{'text-container-phone': isMobile}">
     <div [ngClass]="{'greeting-phone': isMobile}" class="greeting">Hi, my name is</div>
-    <div  [ngClass]="{'name-phone': isMobile}" class="name">Victor Forslund.</div>
-    <div  [ngClass]="{'title-phone': isMobile}" class="title">A Fullstack Engineer</div>
+    <div [ngClass]="{'name-phone': isMobile}" class="name">Victor Forslund.</div>
+    <div [ngClass]="{'title-phone': isMobile}" class="title">A Fullstack Engineer</div>
   </div>
 </div>

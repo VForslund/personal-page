@@ -9,7 +9,7 @@
 }
 
 .greeting-phone {
-  font-size: 13px !important;
+  font-size: 16px !important;
   color: var(--secondary-text-color);
 }
 
@@ -20,21 +20,26 @@
 }
 
 .name-phone {
-  font-size: 32px !important;
-  line-height: 32px !important;
+  font-size: 42px !important;
+  line-height: 42px !important;
 }
 
 .title {
+  padding-left: 5px;
   font-size: 74px !important;
   line-height: 74px !important;
   color: var(--tetra--text-color);
 }
 
 .title-phone {
-  font-size: 26px !important;
-  line-height: 26px !important;
+  font-size: 28px !important;
+  line-height: 28px !important;
 }
 
 .text-container {
   margin-left: 20%;
+}
+
+.text-container-phone {
+  margin-left: 10%;
 }

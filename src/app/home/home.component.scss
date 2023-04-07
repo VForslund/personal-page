@@ -1,8 +1,10 @@
-.content-container{
+.content-container {
   display: flex;
+  flex-direction: column;
   height: calc(100% - 80px);
+  overflow: hidden;
 }
 
-.introduction{
-  width: 100%;
+.sphere {
+  height: calc(100% - 10px);
 }
