@@ -17,8 +17,15 @@ export class AppComponent {
   constructor(private deviceService: DeviceDetectorService,
               private commonService: CommonService,
               private matIconRegistry: MatIconRegistry,
-              private domSanitizer: DomSanitizer
+              private domSanitizer: DomSanitizer,
+              private router: Router
   ) {
+
+    const path = localStorage.getItem('path');
+    if(path) {
+      localStorage.removeItem('path');
+      this.router.navigate([path]);
+    }
 
     this.commonService.setIsMobile(this.deviceService.isMobile() || this.deviceService.isTablet());
     this.matIconRegistry.addSvgIcon(
