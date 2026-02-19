@@ -20,7 +20,10 @@ export class SkillSphereComponent implements AfterViewInit {
       'Scala', 'Java', 'Go',
       'Angular', 'Docker', 'Cassandra',
       'SQL', 'Typescript', 'Python',
-      'C#', 'Git', "WSL", "Linux", "Windows"
+      '.Net', 'Kubernetes', 'Redis',
+      'Memcache', 'Elasticsearch', 'GCP',
+      'Kubernetes', 'Grafana', 'Prometheus',
+      'CI/CD', 'Microservices',
     ];
     const options: TagCloudOptions = {
       maxSpeed: "slow",
